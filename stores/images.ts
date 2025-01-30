@@ -19,5 +19,5 @@ export const useImagesStore = defineStore("images", ()=>{
         addImages()
     } 
 
-    return{ getImages, images, visibleImages }
+    return{ getImages, images, visibleImages,addImages }
 })

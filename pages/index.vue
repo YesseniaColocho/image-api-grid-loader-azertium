@@ -2,6 +2,7 @@
   <TopBar></TopBar>
   <main>
     <ImgGrid :images="imagesStore.visibleImages"></ImgGrid>
+    <infinite-loading @infinite="infiniteHandler"/>
   </main>
 </template>
 
@@ -12,6 +13,9 @@ const imagesStore = useImagesStore();
 onMounted(async () => {
   await imagesStore.getImages();
 });
+function infiniteHandler(){
+   imagesStore.addImages()
+}
 </script>
 
 <style scoped lang="scss">
