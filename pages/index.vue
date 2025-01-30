@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import ImgSquare from '~/components/img-square.vue';
+
+</script>
+
 <template>
    <TopBar></TopBar>
    <main>
