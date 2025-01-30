@@ -1,14 +1,16 @@
 <template>
   <section class="img-grid">
-    <div><ImgSquare></ImgSquare></div>
-    <div><ImgSquare></ImgSquare></div>
-    <div><ImgSquare></ImgSquare></div>
-    <div><ImgSquare></ImgSquare></div>
-    <div>Salto</div>
+    <div v-for="image in props.images"><ImgSquare :image="image" ></ImgSquare></div>
   </section>
 </template>
 
-<script></script>
+<script setup>
+const props = defineProps({
+    images: {
+        type: Array
+    }
+})
+</script>
 
 <style scoped lang="scss">
 .img-grid {

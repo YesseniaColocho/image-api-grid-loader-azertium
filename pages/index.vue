@@ -1,10 +1,7 @@
 <template>
   <TopBar></TopBar>
   <main>
-    <ImgGrid></ImgGrid>
-    <div>
-      {{ imagesStore.images[0] }}
-    </div>
+    <ImgGrid :images="imagesStore.visibleImages"></ImgGrid>
   </main>
 </template>
 
@@ -12,9 +9,8 @@
 import { useImagesStore } from "@/stores/images";
 const imagesStore = useImagesStore();
 
-onMounted( async () => {
+onMounted(async () => {
   await imagesStore.getImages();
-  console.log(imagesStore.images)
 });
 </script>
 

@@ -1,10 +1,18 @@
 <template>
   <section class="image">
-    <img src="/public/prueba.webp" />
+    <img :src="(props.image.url)"/>
+    <!--img :src="newURL(props.image.id)"/-->
   </section>
 </template>
 
-<script></script>
+<script setup>
+import { newURL } from '#imports';
+const props = defineProps({
+  image: {
+    type: Object,
+  },
+});
+</script>
 
 <style scoped lang="scss">
 .image {
