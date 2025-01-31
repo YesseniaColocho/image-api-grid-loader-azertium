@@ -2,20 +2,18 @@
   <TopBar></TopBar>
   <main>
     <ImgGrid :images="imagesStore.visibleImages"></ImgGrid>
-    <infinite-loading @infinite="infiniteHandler"/>
+    <infinite-loading @infinite="imagesStore.addImages()"/>
   </main>
 </template>
 
 <script setup lang="ts">
-import { useImagesStore } from "@/stores/images";
-const imagesStore = useImagesStore();
+import { useImagesStore } from '#imports';
+const imagesStore = useImagesStore()
 
-onMounted(async () => {
-  await imagesStore.getImages();
-});
-function infiniteHandler(){
-   imagesStore.addImages()
-}
+onMounted(async()=>{
+  await imagesStore.getImages()
+})
+
 </script>
 
 <style scoped lang="scss">

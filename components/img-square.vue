@@ -1,17 +1,13 @@
 <template>
   <section class="image">
-    <img :src="(props.image.url)"/>
+    <img :src="props.imageProp.url"/>
     <!--img :src="newURL(props.image.id)"/-->
   </section>
 </template>
 
 <script setup>
 import { newURL } from '#imports';
-const props = defineProps({
-  image: {
-    type: Object,
-  },
-});
+ const props = defineProps (["imageProp"])
 </script>
 
 <style scoped lang="scss">
