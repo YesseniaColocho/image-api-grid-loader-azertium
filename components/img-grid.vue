@@ -1,13 +1,13 @@
 <template>
   <section class="img-grid">
-    <div v-for=" image of props.images" >
-      <ImgSquare :imageProp = "image" ></ImgSquare>
+    <div v-for="image of props.images">
+      <ImgSquare :imageProp="image"></ImgSquare>
     </div>
   </section>
 </template>
 
 <script setup>
-const props = defineProps (["images"])
+const props = defineProps(["images"]);
 </script>
 
 <style scoped lang="scss">
@@ -18,6 +18,12 @@ const props = defineProps (["images"])
   width: 100%;
   div {
     background-color: lightpink;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .img-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 </style>
