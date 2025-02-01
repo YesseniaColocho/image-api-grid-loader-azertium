@@ -1,8 +1,8 @@
 <template>
   <section class="img-grid">
-    <div v-for="image of props.images">
+    <template v-for="image of props.images">
       <ImgSquare :imageProp="image"></ImgSquare>
-    </div>
+    </template>
   </section>
 </template>
 
@@ -16,9 +16,6 @@ const props = defineProps(["images"]);
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px;
   width: 100%;
-  div {
-    background-color: lightpink;
-  }
 }
 
 @media only screen and (max-width: 768px) {

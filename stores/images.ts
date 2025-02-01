@@ -16,7 +16,7 @@ export const useImagesStore = defineStore("images", ()=>{
 
     function addImages(){
         page.value++
-        const limit = page.value * 100
+        const limit = page.value * 20
         visibleImages.value = images.value.slice(0, limit)
     }
 
