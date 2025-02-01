@@ -1,19 +1,21 @@
 <template>
-  <section v-if="showImage" class="image" @click="hideImg">
-    <!--img :src="props.imageProp.url"/-->
-    <img :src="newURL(props.imageProp.id)"/>
-  </section>
+  <Transition>
+    <section v-if="showImage" class="image" @click="hideImg">
+      <!--img :src="props.imageProp.url"/-->
+      <img :src="newURL(props.imageProp.id)" />
+    </section>
+  </Transition>
 </template>
 
 <script setup>
-import { newURL } from '#imports';
- const props = defineProps (["imageProp"])
+import { newURL } from "#imports";
+const props = defineProps(["imageProp"]);
 
- let showImage = ref (true)
+let showImage = ref(true);
 
- function hideImg(){
-  showImage.value = false
- }
+function hideImg() {
+  showImage.value = false;
+}
 </script>
 
 <style scoped lang="scss">
@@ -22,7 +24,7 @@ import { newURL } from '#imports';
   overflow: hidden;
   background: rgb(213, 213, 213);
   cursor: pointer;
-  &:after{
+  &:after {
     content: "";
     display: block;
     padding-bottom: 100%;
@@ -31,4 +33,20 @@ import { newURL } from '#imports';
     width: 100%;
   }
 }
+
+
+
+
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+
+
 </style>
