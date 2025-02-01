@@ -2,7 +2,7 @@
   <TopBar></TopBar>
   <main>
     <ImgGrid :images="imagesStore.visibleImages"></ImgGrid>
-    <infinite-loading @infinite="imagesStore.addImages()" />
+    <infinite-loading  @infinite="imagesStore.addImagesi()" />
   </main>
 </template>
 
@@ -18,5 +18,10 @@ onMounted(async () => {
 <style scoped lang="scss">
 main {
   margin: 0 20px;
+}
+:deep(.v3-infinite-loading > div){
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
 }
 </style>
