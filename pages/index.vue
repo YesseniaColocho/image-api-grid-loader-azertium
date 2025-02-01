@@ -2,7 +2,7 @@
   <TopBar></TopBar>
   <main>
     <ImgGrid :images="imagesStore.visibleImages"></ImgGrid>
-    <infinite-loading  @infinite="imagesStore.addImagesi()" />
+    <infinite-loading  @infinite="imagesStore.addImages()" />
   </main>
 </template>
 
