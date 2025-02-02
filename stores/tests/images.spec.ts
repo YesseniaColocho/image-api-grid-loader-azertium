@@ -12,10 +12,10 @@ describe('Images Store', () => {
 
   it("test Get Images", async ()=>{
     global.fetch = vi.fn(() =>
-		Promise.resolve({
-			json: () => Promise.resolve(mockResponse),
-		}),
-	);
+      Promise.resolve({
+        json: () => Promise.resolve(mockResponse),
+      }),
+    );
     const imagesStore = useImagesStore()
     await imagesStore.getImages()
     expect(imagesStore.images).toStrictEqual(mockResponse)
@@ -30,10 +30,6 @@ describe('Images Store', () => {
     expect(imagesStore.visibleImages).toStrictEqual(imagesStore.images)
   })
 })
-
-
-
-
 
 const mockResponse = [
     {
