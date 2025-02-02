@@ -23,6 +23,8 @@ Carpetas:
 - stores: Contiene el store de imagenes, que gestiona la llamada al JSON y donde se guarda la información del mismo
 - utils: Contiene la función que reemplaza las url de las imagenes del JSON por nuevas url que si devuelven imagenes
 
+- tests: Carpetas que contienen los tests unitarios
+
 ## Instalación
 
 Instalar dependencias:
