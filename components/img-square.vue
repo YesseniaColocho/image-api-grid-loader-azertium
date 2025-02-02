@@ -1,9 +1,11 @@
 <template>
   <Transition>
-    <section v-if="showImage" class="image" @click="hideImg">
-      <!--img :src="props.imageProp.url"/-->
-      <Transition><img v-if="tagImage" :src="tagImage" /></Transition>
-    </section>
+    <div v-if="showImage" class="image" @click="hideImg">
+      <Transition>
+        <!--img :src="props.imageProp.url"/-->
+        <img v-if="tagImage" :src="tagImage" />
+      </Transition>
+    </div>
   </Transition>
 </template>
 
@@ -11,19 +13,24 @@
 import { newURL } from "#imports";
 const props = defineProps(["imageProp"]);
 
-let showImage = ref(true);
+const showImage = ref(true);
 const tagImage = ref("");
 
 function hideImg() {
   showImage.value = false;
 }
 
+function setTagImage(src) {
+  tagImage.value = src;
+}
+
 //Precarga la imagen en JS y luego la muestra en template una vez cargada
 onMounted(() => {
   const imgContainer = new Image();
   imgContainer.src = newURL(props.imageProp.id);
+  console.log(imgContainer.src);
   imgContainer.onload = () => {
-    tagImage.value = imgContainer.src;
+    setTagImage(imgContainer.src);
   };
 });
 </script>
