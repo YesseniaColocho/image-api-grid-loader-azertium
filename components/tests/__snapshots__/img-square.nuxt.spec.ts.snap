@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`image square > component html renders properly after setting tagImage variable 1`] = `
+"<transition-stub data-v-dfd8a8bd="" appear="false" persisted="false" css="true">
+  <div data-v-dfd8a8bd="" class="image">
+    <transition-stub data-v-dfd8a8bd="" appear="false" persisted="false" css="true"><img data-v-dfd8a8bd="" src="https://test.com/image.png"></transition-stub>
+  </div>
+</transition-stub>"
+`;

@@ -1,0 +1,3 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`top bar > component html renders properly 1`] = `"<section data-v-10c29057="" class="top-bar"><img data-v-10c29057="" class="image-azertium" src="/azertium-logo.png"></section>"`;

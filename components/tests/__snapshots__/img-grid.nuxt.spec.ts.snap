@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`image grid > component html renders properly 1`] = `
+"<section data-v-0f1ff06a="" class="img-grid">
+  <img-square-stub data-v-0f1ff06a="" imageprop="[object Object]"></img-square-stub>
+  <img-square-stub data-v-0f1ff06a="" imageprop="[object Object]"></img-square-stub>
+  <img-square-stub data-v-0f1ff06a="" imageprop="[object Object]"></img-square-stub>
+</section>"
+`;
+
+exports[`top bar > component html renders properly 1`] = `
+"<section data-v-0f1ff06a="" class="img-grid">
+  <img-square-stub data-v-0f1ff06a="" imageprop="[object Object]"></img-square-stub>
+  <img-square-stub data-v-0f1ff06a="" imageprop="[object Object]"></img-square-stub>
+  <img-square-stub data-v-0f1ff06a="" imageprop="[object Object]"></img-square-stub>
+</section>"
+`;
