@@ -5,11 +5,11 @@ export const useImagesStore = defineStore("images", ()=>{
 
     const images = ref<Image[]>([])
     const visibleImages = ref<Image[]> ([])
-    const page = ref<number> (0)
+    const page = ref<number>(0)
 
     async function getImages(){
         const results= await fetch("https://jsonplaceholder.typicode.com/photos")
-        const json= await results.json()
+        const json= await results.json() 
         images.value = json
         addImages()
     } 
@@ -20,5 +20,5 @@ export const useImagesStore = defineStore("images", ()=>{
         visibleImages.value = images.value.slice(0, limit)
     }
 
-    return{ getImages, images, visibleImages,addImages }
+    return{ getImages, images, visibleImages,addImages,page }
 })
