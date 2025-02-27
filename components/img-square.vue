@@ -10,7 +10,6 @@
 </template>
 
 <script setup>
-import { newURL } from "#imports";
 const props = defineProps(["imageProp"]);
 
 const showImage = ref(true);

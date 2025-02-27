@@ -7,7 +7,6 @@
 </template>
 
 <script setup lang="ts">
-import { useImagesStore } from "#imports";
 const imagesStore = useImagesStore();
 
 onMounted(async () => {
@@ -24,6 +23,7 @@ useHead({
 main {
   margin: 0 20px;
 }
+
 :deep(.v3-infinite-loading > div) {
   display: flex;
   justify-content: center;
