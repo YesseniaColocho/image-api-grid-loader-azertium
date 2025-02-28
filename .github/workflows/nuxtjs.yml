@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - main
+env:
+  NUXT_APP_BASE_URL: /content-wind-studio-local
 jobs:
   build:
     runs-on: ubuntu-latest
