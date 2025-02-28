@@ -6,7 +6,7 @@ on:
     branches:
       - main
 env:
-  NUXT_APP_BASE_URL: /content-wind-studio-local
+  NUXT_APP_BASE_URL: /image-api-grid-loader-azertium/
 jobs:
   build:
     runs-on: ubuntu-latest
